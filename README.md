@@ -4,6 +4,8 @@ Tensorgraph is an **tensorflow example** to show
 - How to use checkpoint and graph.pb to merge to freeze graph. (not finished yet)
 - How to load graph with tensorflow c++ api and do the prediction.
 
+more description can check on my [blog post](http://jackytung8085.blogspot.tw/2016/06/loading-tensorflow-graph-with-c-api-by.html)</br>
+
 # Requirement
 - tensorflow installation, https://www.tensorflow.org/ <br> go to "GET STARTED" --> "installing from source"
 - bazel installation, http://www.bazel.io/docs/install.html <br>
