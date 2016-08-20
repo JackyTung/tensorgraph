@@ -35,6 +35,7 @@ Mnist_data/
 ```
 # generate frozen graph
 From Tensorflow official guide says that:
+
 What this does is load the GraphDef, pull in the values for all the variables from the latest checkpoint file, and then replace each Variable op with a Const that has the numerical data for the weights stored in its attributes It then strips away all the extraneous nodes that aren't used for forward inference, and saves out the resulting GraphDef into an output file
 
 Hence, we do the following steps to generate frozen graph
