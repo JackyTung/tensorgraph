@@ -33,6 +33,20 @@ models/
 Mnist_data/
     ...
 ```
+# generate frozen graph
+From Tensorflow official guide says that:
+```
+What this does is load the GraphDef, pull in the values for all the variables from the latest checkpoint file, and then replace each Variable op with a Const that has the numerical data for the weights stored in its attributes It then strips away all the extraneous nodes that aren't used for forward inference, and saves out the resulting GraphDef into an output file
+```
+Hence, we do the following steps to generate frozen graph
+```
+bazel build tensorflow/python/tools:freeze_graph && \
+bazel-bin/tensorflow/python/tools/freeze_graph \
+--input_graph=graph.pb \
+--input_checkpoint=model.ckpt \
+--output_graph=/tmp/frozen_graph.pb --output_node_names=softmax
+```
+
 # loadgraph
 How to load graph with tensorflow c++ api and do the prediction. <br>
 Put the directory to tensorflow source code.
