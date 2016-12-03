@@ -69,7 +69,7 @@ with tf.Session() as sess:
 #Training
     for i in range(1000):
         if i % 100 == 0:
-            print "iteration num :", i
+            print("iteration num :", i)
         batch_xs, batch_ys = mnist.train.next_batch(100)
         sess.run(train_step,feed_dict={x: batch_xs, y_: batch_ys})
 
